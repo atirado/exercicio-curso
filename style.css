@@ -1,75 +1,156 @@
+/* Estilos gerais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-align: center;
 }
- 
 
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Cabeçalho */
 header {
-    background-color: #8d3b3b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
     color: #fff;
-    padding: 10px;
-    text-align: center;
+    padding: 20px;
 }
- 
-header nav a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-}
- 
 
+header h1 {
+    font-size: 1.8em;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+header nav a:hover {
+    color: #ffeb3b;
+}
+
+/* Estrutura principal */
 .container {
     display: flex;
-    padding: 10px;
+    padding: 20px;
 }
- 
 
+/* Menu lateral */
 aside {
-    width: 200px;
-    padding: 10px;
-    background-color: #f0f0f0;
-    
+    flex: 1;
+    max-width: 200px;
+    padding: 15px;
+    background-color: #f5f5f5;
 }
- 
+
+aside h2 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+
 aside ul {
     list-style-type: none;
 }
- 
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
 aside ul li a {
     color: #333;
     text-decoration: none;
-   
 }
- 
 
+aside ul li a:hover {
+    color: #3498db;
+}
+
+/* Seção principal */
 main {
-    flex: 1;
-    padding: 10px;
+    flex: 3;
+    padding: 15px;
 }
- 
 
+/* Seção de novidades */
+section h2 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+/* Artigos de produtos */
 article {
-    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 10px;
-    margin-bottom: 10px;
+    margin: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    display: inline-block;
-    width: 200px;
-}
- 
-article img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    border-radius: 10px;
-}
- 
-footer {
-    background-color: #a83232;
-    color: #fff;
+    background-color: #fff;
+    flex-basis: 30%; /* Para exibir três produtos por linha */
     text-align: center;
-    padding: 10px;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+article h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+article p {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Layout dos produtos com flex-wrap */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    aside {
+        max-width: 100%;
+    }
+    
+    section {
+        justify-content: center;
+    }
+
+    article {
+        flex-basis: 45%; /* Reduz tamanho do card para caber mais produtos em tela menor */
+    }
+}
+
+@media (max-width: 480px) {
+    article {
+        flex-basis: 100%; /* Um produto por linha em telas muito pequenas */
+    }
 }
