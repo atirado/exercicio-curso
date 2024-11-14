@@ -130,27 +130,3 @@ footer {
     font-size: 0.9em;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-    
-    aside {
-        max-width: 100%;
-    }
-    
-    section {
-        justify-content: center;
-    }
-
-    article {
-        flex-basis: 45%; /* Reduz tamanho do card para caber mais produtos em tela menor */
-    }
-}
-
-@media (max-width: 480px) {
-    article {
-        flex-basis: 100%; /* Um produto por linha em telas muito pequenas */
-    }
-}
