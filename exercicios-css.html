@@ -3,172 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>avançado</title>
+    <title>Exemplo Flexbox</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     
-    <div class="gallery">
-        <img src="./img2/camiseta.jfif" alt="Image 1">
-        <img src="./img2/iphone.jfif" alt="Image 2">
-        <img src="./img2/livro.jfif" alt="Image 3">
-        <!-- Continue adicionando imagens -->
-      </div>
-      
-      <style>
-        .gallery {
-          display: grid;
-         justify-content: space-around;
-          gap: 10px;
-        }
-      
-        .gallery img {
-          width: 100%;
-          height: auto;
-          object-fit: cover;
-        }
-      </style>
-
-<div class="dashboard">
-    <div class="sidebar">Sidebar</div>
-    <div class="main-content">Main Content</div>
-  </div>
-  
-  <style>
-    .dashboard {
-      display: flex;
-      height: 100vh;
-    }
-  
-    .sidebar {
-      width: 25%;
-      background-color: #333;
-      color: white;
-      padding: 20px;
-    }
-  
-    .main-content {
-      width: 75%;
-      background-color: #f4f4f4;
-      padding: 20px;
-    }
-  </style>
-  
-      
-  <div class="header">Landing Page Header</div>
-<div class="content">
-  <div class="column">Column 1</div>
-  <div class="column">Column 2</div>
-  <div class="column">Column 3</div>
-</div>
-<div class="footer">Footer</div>
-
-<style>
-  .header, .footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .content {
-    display: flex;
-    gap: 10px;
-    padding: 20px;
-  }
-
-  .column {
-    flex: 1;
-    background-color: #ddd;
-    padding: 20px;
-    text-align: center;
-  }
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+    </nav>
 
   
-</style>
-
-<div class="pricing-table">
-    <div class="card">Basic Plan</div>
-    <div class="card">Pro Plan</div>
-    <div class="card">Enterprise Plan</div>
-  </div>
-  
-  <style>
-    .pricing-table {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-    }
-  
-    .card {
-      width: 200px;
-      padding: 20px;
-      background-color: #eee;
-      text-align: center;
-    }
-  
-    
-  </style>
-  
-  <div class="mural">
-    <div class="item">Item 1</div>
-    <div class="item">Item 2</div>
-    <div class="item">Item 3</div>
-    <!-- Continue até 10 itens -->
-  </div>
-  
-  <style>
-    .mural {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-  
-    .item {
-      width: 30%;
-      background-color: #ddd;
-      padding: 20px;
-      text-align: center;
-    }
-  </style>
-
-<div class="profile-card">
-    <img src="avatar.jpg" alt="Avatar" class="avatar">
-    <h2>Nome do Usuário</h2>
-    <p>Descrição breve do perfil.</p>
-    <button>Follow</button>
-    <button>Message</button>
-  </div>
-  
-  <style>
-    .profile-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: #f4f4f4;
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 200px;
-    }
-  
-    .avatar {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin-bottom: 15px;
-    }
-  
-    .profile-card button {
-      margin-top: 10px;
-      padding: 10px;
-      width: 80%;
-      border: none;
-      border-radius: 5px;
-    }
-  </style>
-  
+    <div class="container">
+        <div class="item">
+            Item Centralizado
+        </div>
+    </div>
 
 </body>
 </html>
+    

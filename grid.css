@@ -1,0 +1,93 @@
+ /* Estilo geral */
+ .grid-container {
+  display: grid;
+  margin-bottom: 30px;
+  border: 2px solid #333;
+  padding: 10px;
+}
+.grid-item {
+  background-color: #ccc;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  font-size: 20px;
+}
+
+/* Exercício 1: Básico de Grid Layout */
+.exercise-1 {
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+}
+
+/* Exercício 2: Ajustando o Tamanho das Colunas */
+.exercise-2 {
+  grid-template-columns: 1fr 2fr 1fr; /* Colunas com tamanhos variados */
+}
+
+/* Exercício 3: Espaçamento entre Itens */
+.exercise-3 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px 20px; 
+}
+
+/* Exercício 4: Combinação de Grid e Flexbox */
+.exercise-4 .grid-item {
+  flex-direction: column; 
+}
+.exercise-4 .grid-item div {
+  margin: 5px;
+  background-color: #eee;
+  padding: 5px;
+  border: 1px dashed #666;
+}
+
+/* Exercício 5: Alinhamento dos Itens da Grade */
+.exercise-5 {
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center; 
+}
+
+/* Exercício 6: Área de Grade */
+.exercise-6 {
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "footer footer footer";
+  grid-gap: 10px;
+}
+
+.exercise-6 .grid-item:nth-child(1) {
+  grid-area: header;
+  background-color: lightblue;
+}
+
+.exercise-6 .grid-item:nth-child(2) {
+  grid-area: sidebar;
+  background-color: lightgreen;
+}
+
+.exercise-6 .grid-item:nth-child(3) {
+  grid-area: main;
+  background-color: rgb(204, 192, 86);
+}
+.exercise-6 .grid-item:nth-child(4) {
+  grid-area: footer;
+  background-color: lightgoldenrodyellow;
+}
+
+/* Exercício 7: Usando minmax e auto-fit */
+.exercise-7 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 15px;
+}
+
+/* Exercício 8: Colunas e Linhas Sobrepostas */
+.exercise-8 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.exercise-8 .grid-item:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: rgb(221, 96, 58);
+}
