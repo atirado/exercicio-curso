@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de DOM</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Exercícios de DOM</h1>
+
+    <!-- Alterar Texto -->
+    <div class="section">
+        <h2 id="titulo">Texto Original</h2>
+        <button id="alterarTexto">Alterar Texto</button>
+    </div>
+
+    <!-- Mudar Cor de Fundo -->
+    <div class="section">
+        <button id="mudarCor">Mudar Cor de Fundo</button>
+    </div>
+
+    <!-- Contador de Cliques -->
+    <div class="section">
+        <button id="contador">Clique Aqui</button>
+        <p id="resultado">Cliques: 0</p>
+    </div>
+
+    <!-- Formulário de Contato -->
+    <div class="section">
+        <form id="formContato">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" required></textarea><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="mensagemAgradecimento" style="display: none;">Obrigado por entrar em contato!</p>
+    </div>
+
+    <script>
+        // 1. Alterar o Texto de um Elemento
+        document.getElementById('alterarTexto').addEventListener('click', function() {
+            document.getElementById('titulo').innerText = 'olá!';
+        });
+
+        // 2. Mudar a Cor de Fundo
+        document.getElementById('mudarCor').addEventListener('click', function() {
+            const cores = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33', '#FF33F3'];
+            const corAleatoria = cores[Math.floor(Math.random() * cores.length)];
+            document.body.style.backgroundColor = corAleatoria;
+        });
+
+        // 3. Contador de Cliques
+        let cliques = 0;
+        document.getElementById('contador').addEventListener('click', function() {
+            cliques++;
+            document.getElementById('resultado').innerText = `Cliques: ${cliques}`;
+        });
+
+        // 4. Formulário de Contato
+        document.getElementById('formContato').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            document.getElementById('mensagemAgradecimento').style.display = 'block';
+        });
+        
+    </script>
+
+</body>
+</html>
+ 
