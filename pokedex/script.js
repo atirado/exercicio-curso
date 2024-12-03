@@ -1,3 +1,4 @@
+
 document.getElementById('searchButton').addEventListener('click', () => {
     const input = document.getElementById('pokemonInput').value.toLowerCase().trim();
     fetch(`https://pokeapi.co/api/v2/pokemon/${input}`)
@@ -15,7 +16,7 @@ document.getElementById('searchButton').addEventListener('click', () => {
         })
         .catch(error => {
             alert('Erro: ' + error.message);
-            console.error(error);
+            console.error(error); 
         });
 });
 
