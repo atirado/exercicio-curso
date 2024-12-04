@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de JavaScript</title>
+</head>
+<body>
+    <h1>Exercícios de JavaScript</h1>
+
+    <script>
+        
+
+        // Exercício 2.1: Declarar variáveis usando var, let e const
+        var nome = "Seu Nome";
+        let idade = 20;  // Exemplo
+        const cidade = "Sua Cidade";
+
+        console.log("Nome:", nome);
+        console.log("Idade:", idade);
+        console.log("Cidade:", cidade);
+
+        // Exercício 2.2: Criar objeto aluno e array alunos
+        const aluno = {
+            nome: "Seu Nome",
+            idade: 20,
+            curso: "Curso Exemplo"
+        };
+
+        const alunos = [aluno];
+        console.log("Array de alunos:", alunos);
+
+        // Exercício 2.3: Variável sem valor e depois com null
+        let variavelIndefinida;
+        console.log("Valor inicial:", variavelIndefinida);
+
+        variavelIndefinida = null;
+        console.log("Valor após atribuir null:", variavelIndefinida);
+
+        // Exercício 3.1: Função para somar dois números
+        function soma(a, b) {
+            return a + b;
+        }
+        console.log("Soma 3 + 5:", soma(3, 5));
+        console.log("Soma 10 + 20:", soma(10, 20));
+
+        // Exercício 3.2: Função para verificar se um número é maior que outro
+        function ehMaiorQue(a, b) {
+            return a > b;
+        }
+        console.log("10 é maior que 5?", ehMaiorQue(10, 5));
+        console.log("5 é maior que 10?", ehMaiorQue(5, 10));
+
+        // Exercício 3.3: Verificar se um número está entre 10 e 20
+        function estaEntre10e20(num) {
+            return num > 10 && num < 20;
+        }
+        console.log("15 está entre 10 e 20?", estaEntre10e20(15));
+        console.log("25 está entre 10 e 20?", estaEntre10e20(25));
+    </script>
+</body>
+</html>

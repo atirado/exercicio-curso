@@ -12,4 +12,14 @@ document.getElementById('form-contato').addEventListener('submit', function(even
     }
   });
   
-  
+  fetch('https://jsonplaceholder.typicode.com/posts')
+  .then(response => response.json())
+  .then(data => {
+    const container = document.getElementById('projetos-container');
+    data.slice(0, 3).forEach(projeto => {
+      const projectElement = document.createElement('div');
+      projectElement.innerHTML = `<h3>${projeto.title}</h3><p>${projeto.body}</p>`;
+      container.appendChild(projectElement);
+    });
+  })
+  .catch(error => console.error('Erro ao carregar projetos:', error));
