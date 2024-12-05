@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercícios JavaScript</title>
+</head>
+<body>
+  <h1>Exercícios de JavaScript</h1>
+
+  <h2>1. Verificação de Idade</h2>
+  <input type="number" id="idadeInput" placeholder="Digite sua idade" />
+  <button onclick="mostrarIdade()">Verificar</button>
+  <p id="idadeResultado"></p>
+
+  <h2>2. Conversor de Notas</h2>
+  <input type="number" id="notaInput" placeholder="Digite uma nota (0-5)" />
+  <button onclick="mostrarNota()">Converter</button>
+  <p id="notaResultado"></p>
+
+  <h2>3. Tabuada</h2>
+  <input type="number" id="tabuadaInput" placeholder="Digite um número" />
+  <button onclick="mostrarTabuada()">Exibir Tabuada</button>
+  <pre id="tabuadaResultado"></pre>
+
+  <h2>4. Contagem Regressiva</h2>
+  <input type="number" id="contagemInput" placeholder="Digite um número" />
+  <button onclick="mostrarContagem()">Contagem Regressiva</button>
+  <pre id="contagemResultado"></pre>
+
+  <h2>5. Calculadora</h2>
+  <input type="number" id="num1" placeholder="Número 1" />
+  <input type="number" id="num2" placeholder="Número 2" />
+  <input type="text" id="operacao" placeholder="Operação (+, -, *, /)" />
+  <button onclick="mostrarCalculo()">Calcular</button>
+  <p id="calculoResultado"></p>
+
+  <script>
+    // 1. Verificação de Idade
+    function verificaIdade(idade) {
+      if (idade < 18) return "Menor de idade";
+      else if (idade <= 65) return "Adulta";
+      else return "Idosa";
+    }
+
+    function mostrarIdade() {
+      const idade = document.getElementById("idadeInput").value;
+      document.getElementById("idadeResultado").innerText = verificaIdade(idade);
+    }
+
+    // 2. Conversor de Notas
+    function converteNota(nota) {
+      switch (parseInt(nota)) {
+        case 5: return "A";
+        case 4: return "B";
+        case 3: return "C";
+        case 2: return "D";
+        case 1: return "E";
+        case 0: return "F";
+        default: return "Nota inválida";
+      }
+    }
+
+    function mostrarNota() {
+      const nota = document.getElementById("notaInput").value;
+      document.getElementById("notaResultado").innerText = converteNota(nota);
+    }
+
+    // 3. Tabuada
+    function tabuada(numero) {
+      let resultado = "";
+      for (let i = 1; i <= 10; i++) {
+        resultado += `${numero} x ${i} = ${numero * i}\n`;
+      }
+      return resultado;
+    }
+
+    function mostrarTabuada() {
+      const numero = document.getElementById("tabuadaInput").value;
+      document.getElementById("tabuadaResultado").innerText = tabuada(numero);
+    }
+
+    // 4. Contagem Regressiva
+    function contagemRegressiva(numero) {
+      let resultado = "";
+      while (numero >= 0) {
+        resultado += numero + "\n";
+        numero--;
+      }
+      return resultado;
+    }
+
+    function mostrarContagem() {
+      const numero = document.getElementById("contagemInput").value;
+      document.getElementById("contagemResultado").innerText = contagemRegressiva(numero);
+    }
+
+    // 5. Calculadora
+    function calculadora(num1, num2, operacao) {
+      num1 = parseFloat(num1);
+      num2 = parseFloat(num2);
+      switch (operacao) {
+        case "+": return num1 + num2;
+        case "-": return num1 - num2;
+        case "*": return num1 * num2;
+        case "/": return num2 !== 0 ? num1 / num2 : "Erro: Divisão por zero";
+        default: return "Operação inválida";
+      }
+    }
+
+    function mostrarCalculo() {
+      const num1 = document.getElementById("num1").value;
+      const num2 = document.getElementById("num2").value;
+      const operacao = document.getElementById("operacao").value;
+      document.getElementById("calculoResultado").innerText = calculadora(num1, num2, operacao);
+    }
+  </script>
+</body>
+</html>
